@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    parameters {
+        string(name: 'INPUT_TEXT', defaultValue: '', description: 'Some input string')
+    }
     stages {
         stage('version') {
             steps {
